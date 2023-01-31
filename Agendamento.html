@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ConsultaDr.IsraelNeiva</title>
+</head>
+<body>
+  <script>
+    function addEvent() {
+      let date = new Date();
+      date.setFullYear(date.getFullYear() + 1);
+      date.setHours(10, 0, 0, 0);
+      let startDate = date.toISOString().substring(0, 10).replace(/-/g, "");
+      let endDate = new Date(date.getTime() + 60 * 60 * 1000).toISOString().substring(0, 10).replace(/-/g, "");
+      let details = "Lembramos a importância de se consultar com o Oftalmologista todo ano. Hoje completa 1 ano da sua consulta, agende agora pelo Whatsapp (81)999772767, a saúde dos seus olhos agradece!";
+      window.location.href = "https://www.google.com/calendar/event?action=TEMPLATE&text=Lembrete+de+Consulta+Dr.+Israel+Neiva&dates=" + startDate + "T100000Z/" + endDate + "T110000Z&details=" + encodeURIComponent(details);
+    }
+  </script>
+  <button onclick="addEvent()">Adicionar consulta do Dr. Israel ao Calendário</button>
+</body>
+</html>
