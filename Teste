@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda para Calendário Apple</title>
+</head>
+<body>
+  <h1>Agenda para Calendário Apple</h1>
+  <p>Detalhes do evento:</p>
+  <ul id="eventDetails">
+    <li>Título do Evento: Reunião de Projeto</li>
+    <li>Data: 1 de Fevereiro de 2023</li>
+    <li>Hora: 14h às 15h</li>
+    <li>Local: Sala de Reuniões</li>
+    <li>Notas: Prepare suas anotações e material de apresentação</li>
+  </ul>
+
+  <script>
+    // Obtém a data atual
+    var currentDate = new Date();
+    
+    // Adiciona 1 ano à data atual
+    currentDate.setFullYear(currentDate.getFullYear() + 1);
+    
+    // Formata a data adicionada
+    var newDate = currentDate.toLocaleDateString();
+    
+    // Atualiza a data na página
+    document.querySelector("#eventDetails li:nth-child(2)").textContent = "Data: " + newDate;
+  </script>
+</body>
+</html>
